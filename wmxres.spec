@@ -12,6 +12,7 @@ URL:		http://yalla.free.fr/wn/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		xbitmapsdir	/usr/X11R6/include/X11/bitmaps
 
 %description
 Dockable resolution changer.
@@ -27,10 +28,10 @@ Dokowalny zmieniacz rozdzielczo¶ci.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets,%{_pixmapsdir},%{_includedir}/X11/bitmaps}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets,%{_pixmapsdir},%{xbitmapsdir}}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-install %{name}/%{name}-mask.xbm $RPM_BUILD_ROOT%{_includedir}/X11/bitmaps
+install %{name}/%{name}-mask.xbm $RPM_BUILD_ROOT%{xbitmapsdir}
 install %{name}/%{name}-master.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
@@ -40,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-%{_includedir}/X11/bitmaps/*
+%{xbitmapsdir}/*
 %{_pixmapsdir}/*
 %{_applnkdir}/DockApplets/%{name}.desktop
