@@ -2,7 +2,7 @@ Summary:	wmxres - dockable resolution changer
 Summary(pl):	wmxres - dokowalny zmieniacz rozdzielczo¶ci
 Name:		wmxres
 Version:	1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://yalla.free.fr/wn/%{name}-%{version}-0.tar.gz
@@ -24,7 +24,9 @@ Dokowalny zmieniacz rozdzielczo¶ci.
 %setup -q -n %{name}.app
 
 %build
-%{__make} OPTS="%{rpmcflags} -Wall"
+%{__make} \
+	OPTS="%{rpmcflags} -Wall" \
+	LIBDIR="-L/usr/X11R6/%{_lib}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
