@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=WmXres
+Comment=Change resolution
+Comment[pl]=Zmiana rozdzielczo¶ci
+Exec=wmxres
+Terminal=0
+Type=Application
+# vi: encoding=utf-8
