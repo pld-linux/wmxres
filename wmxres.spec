@@ -28,11 +28,11 @@ Dokowalny zmieniacz rozdzielczo¶ci.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets,%{_datadir}/pixmaps,%{_includedir}/X11/bitmaps/}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets,%{_pixmapsdir},%{_includedir}/X11/bitmaps}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-install %{name}/%{name}-mask.xbm $RPM_BUILD_ROOT%{_includedir}/X11/bitmaps/
-install %{name}/%{name}-master.xpm $RPM_BUILD_ROOT%{_datadir}/pixmaps/
+install %{name}/%{name}-mask.xbm $RPM_BUILD_ROOT%{_includedir}/X11/bitmaps
+install %{name}/%{name}-master.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 %clean
@@ -42,5 +42,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
 %{_includedir}/X11/bitmaps/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_applnkdir}/DockApplets/%{name}.desktop
