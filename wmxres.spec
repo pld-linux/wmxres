@@ -2,7 +2,7 @@ Summary:	wmxres - dockable resolution changer
 Summary(pl):	wmxres - dokowalny zmieniacz rozdzielczo¶ci
 Name:		wmxres
 Version:	1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://yalla.free.fr/wn/%{name}-%{version}-0.tar.gz
@@ -28,12 +28,12 @@ Dokowalny zmieniacz rozdzielczo¶ci.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets,%{_pixmapsdir},%{xbitmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}/docklets,%{_pixmapsdir},%{xbitmapsdir}}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 install %{name}/%{name}-mask.xbm $RPM_BUILD_ROOT%{xbitmapsdir}
 install %{name}/%{name}-master.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{xbitmapsdir}/*
 %{_pixmapsdir}/*
-#%{_applnkdir}/DockApplets/%{name}.desktop
+%{_desktopdir}/docklets/%{name}.desktop
