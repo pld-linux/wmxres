@@ -12,7 +12,6 @@ URL:		http://yalla.free.fr/wn/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 Dockable resolution changer.
