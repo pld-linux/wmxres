@@ -1,5 +1,5 @@
 Summary:	wmxres - dockable resolution changer
-Summary(pl):	wmxres - dokowalny zmieniaæ rozdzielczo¶ci
+Summary(pl):	wmxres - dokowalny zmieniacz rozdzielczo¶ci
 Name:		wmxres
 Version:	1.1
 Release:	1
@@ -14,8 +14,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_prefix		/usr/X11R6
 
 %description
+Dockable resolution changer.
 
 %description -l pl
+Dokowalny zmieniacz rozdzielczo¶ci.
 
 %prep
 %setup -q -n %{name}.app
@@ -37,7 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
 %{_includedir}/X11/bitmaps/*
 %{_datadir}/pixmaps/*
