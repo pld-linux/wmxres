@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://yalla.free.fr/wn/%{name}-%{version}-0.tar.gz
+# Source0-md5:	a1b44620bd2f567c3f2a4b6767dedb33
 Source1:	%{name}.desktop
 URL:		http://yalla.free.fr/wn/
 BuildRequires:	gtk+-devel >= 1.2.0
