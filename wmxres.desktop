@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=WmXres
 Comment=Change resolution
-Comment[pl]=Zmiana rozdzielczo¶ci
+Comment[pl]=Zmiana rozdzielczości
 Exec=wmxres
 Terminal=0
 Type=Application
