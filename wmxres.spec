@@ -1,5 +1,5 @@
 Summary:	wmxres - dockable resolution changer
-Summary(pl.UTF-8):   wmxres - dokowalny zmieniacz rozdzielczości
+Summary(pl.UTF-8):	wmxres - dokowalny zmieniacz rozdzielczości
 Name:		wmxres
 Version:	1.1
 Release:	3
