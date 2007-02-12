@@ -1,5 +1,5 @@
 Summary:	wmxres - dockable resolution changer
-Summary(pl):	wmxres - dokowalny zmieniacz rozdzielczo∂ci
+Summary(pl.UTF-8):   wmxres - dokowalny zmieniacz rozdzielczo≈õci
 Name:		wmxres
 Version:	1.1
 Release:	3
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Dockable resolution changer.
 
-%description -l pl
-Dokowalny zmieniacz rozdzielczo∂ci.
+%description -l pl.UTF-8
+Dokowalny zmieniacz rozdzielczo≈õci.
 
 %prep
 %setup -q -n %{name}.app
